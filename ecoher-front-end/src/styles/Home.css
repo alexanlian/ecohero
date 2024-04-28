@@ -1,0 +1,10 @@
+.home {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--light-green);
+    color: var(--white);
+}
+
+.home h2 {
+    margin-top: 0;
+}

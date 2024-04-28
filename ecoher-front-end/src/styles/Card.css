@@ -1,0 +1,22 @@
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem;
+    transition: transform 0.2s;
+    box-shadow: inset;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    color: var(--ocean-blue);
+}
+
+.card p {
+    color: var(--light-green);
+}
+

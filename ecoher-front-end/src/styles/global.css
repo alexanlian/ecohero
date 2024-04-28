@@ -1,0 +1,21 @@
+:root {
+    --light-green: #8BC34A;
+    --white: #FFFFFF;
+    --ocean-blue: #00ACC1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+    color: var(--ocean-blue);
+}
+
+a {
+    color: var(--light-green);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
