@@ -19,6 +19,16 @@ function Navbar() {
         navigate('/login'); // Redirect to the login page
     };
     const {t} = useTranslation();
+    useEffect(()=>{
+        const link = document.createElement('link');
+        link.href = 'https://cdn.jsdelivr.net/gh/alexanlian/ecohero@main/ecohero-frontend/src/styles/Navbar.css';
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+    
+        return () => {
+          document.head.removeChild(link); 
+        }
+    },[]);
     return (
         <nav>
             <h1>Eco Hero</h1>

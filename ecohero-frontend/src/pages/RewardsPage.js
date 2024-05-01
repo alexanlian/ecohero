@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import '../styles/RewardsPage.css';
 import { useTranslation } from 'react-i18next';
 
 function RewardsPage() {
     const [rewards, setRewards] = useState([]);
+
+    useEffect(()=>{
+        const link = document.createElement('link');
+        link.href = 'https://cdn.jsdelivr.net/gh/alexanlian/ecohero@main/ecohero-frontend/src/styles/RewardsPage.css';
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+    
+        return () => {
+          document.head.removeChild(link); 
+        }
+    },[]);
 
     useEffect(() => {
         fetch('http://localhost:3001/rewards', {

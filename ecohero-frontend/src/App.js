@@ -4,7 +4,6 @@ import RegistrationPage from './pages/RegistrationPage';
 import ChallengesPage from './pages/ChallengesPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import RewardsPage from './pages/RewardsPage';
-import "./styles/global.css";
 function App() {
   return (
     <BrowserRouter>

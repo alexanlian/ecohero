@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../styles/RegistrationPage.css';
 import { useTranslation } from 'react-i18next';
 
 function RegistrationPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+
+    useEffect(()=>{
+        const link = document.createElement('link');
+        link.href = 'https://cdn.jsdelivr.net/gh/alexanlian/ecohero@main/ecohero-frontend/src/styles/RegistrationPage.css';
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+    
+        return () => {
+          document.head.removeChild(link); 
+        }
+    },[]);
 
     const handleSubmit = async (event) => {
         event.preventDefault();

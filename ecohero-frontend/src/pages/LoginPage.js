@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../styles/LoginPage.css';
 import { useTranslation } from 'react-i18next';
 
 function LoginPage() {
@@ -17,7 +16,16 @@ function LoginPage() {
             navigate("/");  // Redirect to homepage if already logged in
         }
     }, [navigate]);
-
+    useEffect(()=>{
+        const link = document.createElement('link');
+        link.href = 'https://cdn.jsdelivr.net/gh/alexanlian/ecohero@main/ecohero-frontend/src/styles/LoginPage.css';
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+    
+        return () => {
+          document.head.removeChild(link); 
+        }
+    },[]);
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {

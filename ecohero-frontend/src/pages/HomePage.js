@@ -12,10 +12,20 @@ function HomePage(){
     useEffect(() => {
         const token = localStorage.getItem('token'); // Retrieve the token from local storage
         if (!token) {
-            navigate('/login'); // Redirect to login page if no token is found
+            navigate('/login'); 
         }
     }, [navigate]);
     const { t } = useTranslation();
+    useEffect(()=>{
+        const link = document.createElement('link');
+        link.href = 'https://cdn.jsdelivr.net/gh/alexanlian/ecohero@main/ecohero-frontend/src/styles/HomePage.css';
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+    
+        return () => {
+          document.head.removeChild(link); 
+        }
+    },[]);
     return(
         <div>
             <Navbar />

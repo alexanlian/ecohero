@@ -2,12 +2,12 @@ name: Full Stack CI/CD
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'ecohero-frontend/**'
       - 'ecohero-backend/**'
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'ecohero-frontend/**'
       - 'ecohero-backend/**'
