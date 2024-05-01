@@ -23,7 +23,7 @@ jobs:
         node-version: '14.x'
     - run: cd ecohero-backend && npm install
     - name: Build Backend
-      run: cd ecohero-backend && npm run build
+      run: cd ecohero-backend && node server.js
 
   frontend:
     needs: backend
@@ -36,4 +36,4 @@ jobs:
         node-version: '14.x'
     - run: cd ecohero-frontend && npm install
     - name: Build Frontend
-      run: cd ecohero-frontend && npm run build
+      run: cd ecohero-frontend && npm start
